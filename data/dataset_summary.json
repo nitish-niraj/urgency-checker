@@ -1,0 +1,28 @@
+{
+  "total_samples": 9000,
+  "categories": {
+    "road_problems": 1500,
+    "drainage": 1500,
+    "electricity": 1500,
+    "garbage": 1500,
+    "water_supply": 1500,
+    "public_safety": 1500
+  },
+  "urgency_levels": {
+    "HIGH": 3000,
+    "MEDIUM": 3000,
+    "LOW": 3000
+  },
+  "urgency_score_stats": {
+    "mean": 5.482,
+    "median": 5.0,
+    "min": "1",
+    "max": "10"
+  },
+  "text_length_stats": {
+    "mean": 169.22433333333333,
+    "median": 165.0,
+    "min": "88",
+    "max": "262"
+  }
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #333; }
+        .status { padding: 15px; margin: 15px 0; border-radius: 5px; }
+        .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .info { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        button:hover { background: #0056b3; }
+        pre {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 API Test Page</h1>
+        
+        <div id="status" class="status info">
+            Click a button below to test the API
+        </div>
+        
+        <button onclick="testHealth()">Test Health Endpoint</button>
+        <button onclick="testClassify()">Test Classify Endpoint</button>
+        <button onclick="testStats()">Test Stats Endpoint</button>
+        
+        <h2>Response:</h2>
+        <pre id="response">No test run yet</pre>
+    </div>
+    
+    <script>
+        const baseURL = 'http://localhost:8001';
+        const statusDiv = document.getElementById('status');
+        const responseDiv = document.getElementById('response');
+        
+        function showStatus(message, type) {
+            statusDiv.className = `status ${type}`;
+            statusDiv.textContent = message;
+        }
+        
+        function showResponse(data) {
+            responseDiv.textContent = JSON.stringify(data, null, 2);
+        }
+        
+        async function testHealth() {
+            showStatus('Testing /health endpoint...', 'info');
+            try {
+                const response = await fetch(`${baseURL}/health`);
+                const data = await response.json();
+                showStatus('✅ Health endpoint working!', 'success');
+                showResponse(data);
+            } catch (error) {
+                showStatus(`❌ Error: ${error.message}`, 'error');
+                showResponse({error: error.message});
+            }
+        }
+        
+        async function testStats() {
+            showStatus('Testing /stats endpoint...', 'info');
+            try {
+                const response = await fetch(`${baseURL}/stats`);
+                const data = await response.json();
+                showStatus('✅ Stats endpoint working!', 'success');
+                showResponse(data);
+            } catch (error) {
+                showStatus(`❌ Error: ${error.message}`, 'error');
+                showResponse({error: error.message});
+            }
+        }
+        
+        async function testClassify() {
+            showStatus('Testing /classify-urgency endpoint...', 'info');
+            
+            const testData = {
+                text_description: "There are dangerous cracks in the road near the university hospital. Please fix this as soon as possible.",
+                location_address: "Near University Hospital",
+                category: "Infrastructure"
+            };
+            
+            try {
+                const response = await fetch(`${baseURL}/classify-urgency`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(testData)
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${await response.text()}`);
+                }
+                
+                const data = await response.json();
+                showStatus('✅ Classification endpoint working!', 'success');
+                showResponse(data);
+            } catch (error) {
+                showStatus(`❌ Error: ${error.message}`, 'error');
+                showResponse({error: error.message, stack: error.stack});
+            }
+        }
+        
+        // Auto-test on load
+        window.addEventListener('load', () => {
+            console.log('Page loaded, ready to test');
+        });
+    </script>
+</body>
+</html>

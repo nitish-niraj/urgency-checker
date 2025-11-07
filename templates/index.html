@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-Powered Civic Issue Urgency Classifier - Intelligent government response prioritization system">
+    <meta name="keywords" content="civic issues, AI classifier, government services, smart city, urgency classification">
+    <meta name="author" content="Nitish Niraj">
+    
+    <title>🏛️ Civic Issue Urgency Classifier | AI-Powered Government Response System</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/static/css/styles.css?v=2.0">
+    <link rel="stylesheet" href="/static/css/animations.css?v=2.0">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <!-- ============================================
+         NAVIGATION BAR
+         ============================================ -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#home" class="navbar-brand">
+                <span style="font-size: 1.8rem;">🏛️</span>
+                <span>Civic Classifier</span>
+            </a>
+            
+            <ul class="navbar-menu">
+                <li><a href="#home" class="navbar-link active">Home</a></li>
+                <li><a href="#features" class="navbar-link">Features</a></li>
+                <li><a href="#classify" class="navbar-link">Classify</a></li>
+                <li><a href="#stats" class="navbar-link">Stats</a></li>
+                <li><a href="https://github.com/nitish-niraj/urgency-checker" target="_blank" class="navbar-link">
+                    GitHub
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Smart Civic Issue Classification
+            </h1>
+            
+            <p class="hero-subtitle">
+                AI-powered multimodal system that analyzes citizen reports and automatically assigns urgency scores for efficient government response
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="#classify" class="btn btn-primary btn-large">
+                    🚀 Try It Now
+                </a>
+                <a href="#features" class="btn btn-secondary btn-large">
+                    📖 Learn More
+                </a>
+            </div>
+            
+            <div style="margin-top: 3rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); max-width: 600px; margin-left: auto; margin-right: auto;">
+                <div style="display: flex; justify-content: space-around; text-align: center;">
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: 800; color: #d0d0d0;">Text-Based</div>
+                        <div style="color: var(--text-muted); margin-top: 0.5rem;">NLP Analysis</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: 800; color: #e8e8e8;">Fast</div>
+                        <div style="color: var(--text-muted); margin-top: 0.5rem;">Response Time</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: 800; color: #b8b8b8;">24/7</div>
+                        <div style="color: var(--text-muted); margin-top: 0.5rem;">Availability</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FEATURES SECTION
+         ============================================ -->
+    <section id="features" class="features">
+        <div style="text-align: center; margin-bottom: 4rem;">
+            <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 1rem;">
+                ✨ Powerful Features
+            </h2>
+            <p style="font-size: 1.3rem; color: var(--text-muted); max-width: 700px; margin: 0 auto;">
+                Advanced AI technology for intelligent civic issue prioritization
+            </p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card scroll-reveal hover-lift">
+                <div class="feature-icon">🔤</div>
+                <h3 class="feature-title">NLP Text Analysis</h3>
+                <p class="feature-description">
+                    Advanced sentiment analysis using TextBlob and TF-IDF vectorization. 
+                    Automatically detects urgency keywords and context from text descriptions.
+                </p>
+            </div>
+            
+            <div class="feature-card scroll-reveal hover-lift">
+                <div class="feature-icon">🤖</div>
+                <h3 class="feature-title">AI Classification</h3>
+                <p class="feature-description">
+                    RandomForest ensemble model trained on civic issue patterns. 
+                    Provides urgency scores and confidence levels for prioritization.
+                </p>
+            </div>
+            
+            <div class="feature-card scroll-reveal hover-lift">
+                <div class="feature-icon">🏢</div>
+                <h3 class="feature-title">Smart Routing</h3>
+                <p class="feature-description">
+                    Automatic department assignment based on issue type and urgency level. 
+                    Optimizes response workflow for government agencies.
+                </p>
+            </div>
+            
+            <div class="feature-card scroll-reveal hover-lift">
+                <div class="feature-icon">⏱️</div>
+                <h3 class="feature-title">Response Estimation</h3>
+                <p class="feature-description">
+                    AI-predicted resolution times based on urgency scores and historical data. 
+                    Sets realistic expectations for citizens.
+                </p>
+            </div>
+            
+            <div class="feature-card scroll-reveal hover-lift">
+                <div class="feature-icon">📊</div>
+                <h3 class="feature-title">Real-time Analytics</h3>
+                <p class="feature-description">
+                    Comprehensive dashboard with performance metrics, classification distribution, 
+                    and system health monitoring.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CLASSIFICATION SECTION
+         ============================================ -->
+    <section id="classify" class="classifier-section">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 1rem;">
+                🎯 Classify Your Civic Issue
+            </h2>
+            <p style="font-size: 1.2rem; color: var(--text-muted);">
+                Get instant AI-powered urgency assessment and action recommendations
+            </p>
+        </div>
+        
+        <div class="form-container">
+            <form id="classifyForm">
+                <div class="form-group">
+                    <label for="issueDescription" class="form-label">
+                        📝 Issue Description *
+                    </label>
+                    <textarea 
+                        id="issueDescription"
+                        name="description"
+                        class="form-textarea"
+                        placeholder="Describe the civic issue in detail... (e.g., 'There are dangerous cracks in the road near the university hospital. Please fix this as soon as possible.')"
+                        required
+                        minlength="10"
+                    ></textarea>
+                    <div id="charCount" class="char-count">0 characters</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location" class="form-label">
+                        📍 Location Address
+                    </label>
+                    <input 
+                        type="text"
+                        id="location"
+                        name="location"
+                        class="form-input"
+                        placeholder="e.g., Near University Hospital, Main Street"
+                    />
+                </div>
+                
+                <div class="form-group">
+                    <label for="category" class="form-label">
+                        🏷️ Category
+                    </label>
+                    <select 
+                        id="category"
+                        name="category"
+                        class="form-input"
+                        style="cursor: pointer;"
+                    >
+                        <option value="Infrastructure">🏗️ Infrastructure</option>
+                        <option value="Safety">🚨 Safety & Emergency</option>
+                        <option value="Environment">🌳 Environment</option>
+                        <option value="Public Health">🏥 Public Health</option>
+                        <option value="Transportation">🚗 Transportation</option>
+                        <option value="Utilities">💡 Utilities</option>
+                        <option value="Other">📦 Other</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 1.2rem; padding: 20px;">
+                    🔍 Classify Urgency
+                </button>
+            </form>
+        </div>
+        
+        <!-- Result Container (hidden by default) -->
+        <div id="resultContainer" class="result-container hidden"></div>
+    </section>
+
+    <!-- ============================================
+         STATISTICS SECTION
+         ============================================ -->
+    <section id="stats" class="features">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 1rem;">
+                📊 System Performance
+            </h2>
+            <p style="font-size: 1.2rem; color: var(--text-muted);">
+                Real-time statistics and performance metrics
+            </p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card scroll-reveal">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🔤</div>
+                <div style="font-size: 2.5rem; font-weight: 800; color: #d0d0d0; margin-bottom: 0.5rem;">Text-Only</div>
+                <h3 class="feature-title">NLP Classification</h3>
+                <p class="feature-description">
+                    Text-based urgency analysis using TF-IDF and sentiment analysis
+                </p>
+            </div>
+            
+            <div class="feature-card scroll-reveal">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+                <div style="font-size: 2.5rem; font-weight: 800; color: #b8b8b8; margin-bottom: 0.5rem;">Fast</div>
+                <h3 class="feature-title">Quick Response</h3>
+                <p class="feature-description">
+                    Instant classification with urgency scores and confidence levels
+                </p>
+            </div>
+            
+            <div class="feature-card scroll-reveal">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🏢</div>
+                <div style="font-size: 2.5rem; font-weight: 800; color: #e8e8e8; margin-bottom: 0.5rem;">Smart</div>
+                <h3 class="feature-title">Auto Routing</h3>
+                <p class="feature-description">
+                    Automatic department assignment based on issue category and urgency
+                </p>
+            </div>
+            
+            <div class="feature-card scroll-reveal">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">�</div>
+                <div style="font-size: 2.5rem; font-weight: 800; color: #a0a0a0; margin-bottom: 0.5rem;">Detailed</div>
+                <h3 class="feature-title">Rich Output</h3>
+                <p class="feature-description">
+                    Comprehensive results with reasoning, confidence scores, and ETAs
+                </p>
+            </div>
+            
+            <div class="feature-card scroll-reveal">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">�</div>
+                <div style="font-size: 2.5rem; font-weight: 800; color: #c8c8c8; margin-bottom: 0.5rem;">API Ready</div>
+                <h3 class="feature-title">RESTful API</h3>
+                <p class="feature-description">
+                    FastAPI backend with OpenAPI docs for easy integration
+                </p>
+            </div>
+            
+            <div class="feature-card scroll-reveal">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">💾</div>
+                <div style="font-size: 2.5rem; font-weight: 800; color: #888888; margin-bottom: 0.5rem;">Lightweight</div>
+                <h3 class="feature-title">Efficient</h3>
+                <p class="feature-description">
+                    CPU-friendly models with minimal resource requirements
+                </p>
+            </div>
+        </div>
+        
+        <div style="margin-top: 3rem; text-align: center;">
+            <a href="/stats" class="btn btn-secondary btn-large" target="_blank">
+                📊 View Detailed Statistics
+            </a>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer style="padding: 3rem 2rem; text-align: center; background: rgba(0, 0, 0, 0.2); backdrop-filter: blur(20px); border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 5rem;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="font-size: 2rem; margin-bottom: 1rem;">🏛️</div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Civic Issue Urgency Classifier</h3>
+            <p style="color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                AI-powered multimodal system for intelligent government response prioritization
+            </p>
+            
+            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+                <a href="https://github.com/nitish-niraj/urgency-checker" target="_blank" style="color: var(--text-muted); text-decoration: none; transition: color 0.3s;">
+                    GitHub Repository
+                </a>
+                <a href="/docs" target="_blank" style="color: var(--text-muted); text-decoration: none; transition: color 0.3s;">
+                    API Documentation
+                </a>
+                <a href="/health" target="_blank" style="color: var(--text-muted); text-decoration: none; transition: color 0.3s;">
+                    System Health
+                </a>
+            </div>
+            
+            <div style="padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                    © 2025 Nitish Niraj. Made with ❤️ for smarter government services.
+                </p>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.5rem;">
+                    Powered by FastAPI • scikit-learn • TextBlob • iOS 26 Design
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
