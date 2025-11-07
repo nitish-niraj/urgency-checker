@@ -1,3 +1,13 @@
+---
+title: Civic Issue Urgency Classifier
+emoji: 🚨
+colorFrom: gray
+colorTo: gray
+sdk: docker
+app_file: src/demo_api_browser.py
+pinned: true
+---
+
 # 🏛️ Civic Issue Urgency Classifier
 
 <div align="center">
